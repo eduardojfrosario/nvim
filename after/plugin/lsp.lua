@@ -45,7 +45,7 @@ require("mason-lspconfig").setup({
 ---- cmp ----
 
 local cmp = require("cmp")
-
+local cmp_format = require('lsp-zero').cmp_format({details = true})
 cmp.setup({
     sources = {
         { name = "nvim_lsp" },
@@ -62,5 +62,6 @@ cmp.setup({
             require("luasnip").lsp_expand(args.body)
         end,
     },
+    formatting = cmp_format,
 })
 
