@@ -9,4 +9,6 @@ return {
 	{ "ellisonleao/gruvbox.nvim", lazy = true, opts = {} },
 
 	{ "rebelot/kanagawa.nvim", lazy = true, opts = {} },
+
+	{ "navarasu/onedark.nvim", lazy = true, opts = {} },
 }

@@ -3,7 +3,7 @@ require("kanagawa").setup({
 	compile = false, -- enable compiling the colorscheme
 	undercurl = true, -- enable undercurls
 	commentStyle = { italic = true },
-	functionStyle = { italic = true, bold = true },
+	functionStyle = { italic = true, bold = true},
 	keywordStyle = { italic = true },
 	statementStyle = { bold = true },
 	typeStyle = {},
@@ -23,3 +23,4 @@ require("kanagawa").setup({
 		light = "lotus",
 	},
 })
+
