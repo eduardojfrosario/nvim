@@ -8,5 +8,6 @@ require("conform").setup({
 		javascriptreact = { "prettierd" },
 		typescriptreact = { "prettierd" },
 		html = { "prettierd" },
+		sh = { "shellharden" },
 	},
 })
