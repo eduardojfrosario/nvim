@@ -26,7 +26,7 @@ require("mason-lspconfig").setup({
         "clangd",
         "eslint",
         "lua_ls",
-        "jedi_language_server",
+        "pyright",
         "ruff",
         "rust_analyzer",
         "tailwindcss",
