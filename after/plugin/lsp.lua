@@ -33,6 +33,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+})
+
+
 lsp_zero.set_sign_icons({
     error = "✘",
     warn = "▲",
