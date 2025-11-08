@@ -1,7 +1,7 @@
 require("losg.lazy")
 require("losg.remap")
 require("losg.set")
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme rose-pine")
 vim.g.user_emmet_leader_key = '<C-b>'
 vim.g.copilot_enabled = false
 
