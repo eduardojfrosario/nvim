@@ -11,4 +11,6 @@ return {
 	{ "rebelot/kanagawa.nvim", lazy = true, opts = {} },
 
 	{ "navarasu/onedark.nvim", lazy = true, opts = {} },
+
+    { "EdenEast/nightfox.nvim" },
 }
