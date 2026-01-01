@@ -1,0 +1,7 @@
+local builtin = require("fzf-lua")
+vim.keymap.set("n", "<leader>pf", builtin.files, {})
+vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>pq", builtin.quickfix, {})
+vim.keymap.set("n", "<leader>ps", builtin.spell_suggest, {})
