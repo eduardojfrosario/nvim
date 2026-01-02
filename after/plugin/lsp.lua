@@ -36,6 +36,7 @@ require("mason-lspconfig").setup({
 		"rust_analyzer",
 		"tailwindcss",
 		"ts_ls",
+        "marksman",
 	},
 	-- It automatically runs vim.lsp.enable() for installed servers.
 	automatic_enable = true,
