@@ -36,7 +36,7 @@ require("mason-lspconfig").setup({
 		"rust_analyzer",
 		"tailwindcss",
 		"ts_ls",
-        "marksman",
+		"marksman",
 	},
 	-- It automatically runs vim.lsp.enable() for installed servers.
 	automatic_enable = true,
@@ -44,4 +44,8 @@ require("mason-lspconfig").setup({
 
 ---- cmp ----
 require("mini.snippets").setup({})
+require("mini.icons").setup({})
 require("mini.completion").setup({})
+
+-- <C-y> chooses the first completion if none select
+vim.opt.completeopt = { "menu", "menuone", "noinsert" }
