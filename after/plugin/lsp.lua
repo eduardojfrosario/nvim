@@ -43,9 +43,5 @@ require("mason-lspconfig").setup({
 })
 
 ---- cmp ----
-require("mini.snippets").setup({})
-require("mini.icons").setup({})
-require("mini.completion").setup({})
-
 -- <C-y> chooses the first completion if none select
 vim.opt.completeopt = { "menu", "menuone", "noinsert" }
