@@ -42,24 +42,40 @@ require("mini.surround").setup({
 	silent = false,
 })
 
-
 ---move---
-require("mini.move").setup(
-{
-  mappings = {
-    --visual mode (only selected block)
-    left = '<M-h>',
-    right = '<M-l>',
-    down = '<M-j>',
-    up = '<M-k>',
-    --normal mode (entire line)
-    line_left = '<M-h>',
-    line_right = '<M-l>',
-    line_down = '<M-j>',
-    line_up = '<M-k>',
-  },
-  options = {
-    reindent_linewise = true,
-  },
-}
+require("mini.move").setup({
+	mappings = {
+		--visual mode (only selected block)
+		left = "<M-h>",
+		right = "<M-l>",
+		down = "<M-j>",
+		up = "<M-k>",
+		--normal mode (entire line)
+		line_left = "<M-h>",
+		line_right = "<M-l>",
+		line_down = "<M-j>",
+		line_up = "<M-k>",
+	},
+	options = {
+		reindent_linewise = true,
+	},
+})
+
+---ai---
+require("mini.ai").setup(
+	{
+		custom_textobjects = nil,
+		mappings = {
+			around = "a",
+			inside = "i",
+
+            around_next = "an",
+			inside_next = "in",
+			around_last = "al",
+			inside_last = "il",
+		},
+		n_lines = 50,
+		search_method = "cover_or_next",
+		silent = false,
+	}
 )
