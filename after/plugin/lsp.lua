@@ -36,6 +36,7 @@ require("mason-lspconfig").setup({
 		"tailwindcss",
 		"ts_ls",
 		"marksman",
+		"sonarlint-language-server",
 	},
 	-- It automatically runs vim.lsp.enable() for installed servers.
 	automatic_enable = true,
@@ -46,7 +47,6 @@ require("mason-nvim-lint").setup({
 		"eslint_d",
 		"pylint",
 		"jsonlint",
-		"sonarlint-language-server",
 	},
 	automatic_installation = true,
 })
