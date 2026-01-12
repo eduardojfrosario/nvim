@@ -32,7 +32,6 @@ require("mason-lspconfig").setup({
 		"eslint",
 		"lua_ls",
 		"jedi_language_server",
-		"ruff",
 		"rust_analyzer",
 		"tailwindcss",
 		"ts_ls",
@@ -42,6 +41,18 @@ require("mason-lspconfig").setup({
 	automatic_enable = true,
 })
 
----- cmp ----
--- <C-y> chooses the first completion if none select
-vim.opt.completeopt = { "menu", "menuone", "noinsert" }
+require("mason-nvim-lint").setup({
+	ensure_installed = {
+		"eslint_d",
+		"pylint",
+		"jsonlint",
+		"sonarlint-language-server",
+	},
+	automatic_installation = true,
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
+	callback = function()
+		require("lint").try_lint()
+	end,
+})

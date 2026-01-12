@@ -17,6 +17,8 @@ require("mini.completion").setup({
 		signature = { border = "double" },
 	},
 })
+-- <C-y> chooses the first completion if none select
+vim.opt.completeopt = { "menu", "menuone", "noinsert" }
 
 ---autopairs---
 require("mini.pairs").setup({

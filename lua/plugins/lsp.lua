@@ -4,7 +4,8 @@ return {
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
+			{ "rafamadriz/friendly-snippets" },
+			{ "mfussenegger/nvim-lint" },
 		},
 	},
-    { "rafamadriz/friendly-snippets" }
 }
