@@ -6,4 +6,5 @@ return {
 			"neovim/nvim-lspconfig",
 		},
 	},
+    { "rafamadriz/friendly-snippets" }
 }

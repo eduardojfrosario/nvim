@@ -1,6 +1,22 @@
-require("mini.snippets").setup({})
 require("mini.icons").setup({})
-require("mini.completion").setup({})
+
+---snippets---
+local mini_snippets = require("mini.snippets")
+local gen_loader = mini_snippets.gen_loader
+mini_snippets.setup({
+	snippets = {
+		gen_loader.from_lang(),
+	},
+})
+mini_snippets.start_lsp_server({})
+
+---cmp---
+require("mini.completion").setup({
+	window = {
+		info = { border = "double" },
+		signature = { border = "double" },
+	},
+})
 
 ---autopairs---
 require("mini.pairs").setup({
@@ -62,20 +78,18 @@ require("mini.move").setup({
 })
 
 ---ai---
-require("mini.ai").setup(
-	{
-		custom_textobjects = nil,
-		mappings = {
-			around = "a",
-			inside = "i",
+require("mini.ai").setup({
+	custom_textobjects = nil,
+	mappings = {
+		around = "a",
+		inside = "i",
 
-            around_next = "an",
-			inside_next = "in",
-			around_last = "al",
-			inside_last = "il",
-		},
-		n_lines = 50,
-		search_method = "cover_or_next",
-		silent = false,
-	}
-)
+		around_next = "an",
+		inside_next = "in",
+		around_last = "al",
+		inside_last = "il",
+	},
+	n_lines = 50,
+	search_method = "cover_or_next",
+	silent = false,
+})
