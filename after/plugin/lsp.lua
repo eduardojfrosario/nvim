@@ -36,7 +36,6 @@ require("mason-lspconfig").setup({
 		"tailwindcss",
 		"ts_ls",
 		"marksman",
-		"sonarlint-language-server",
 	},
 	-- It automatically runs vim.lsp.enable() for installed servers.
 	automatic_enable = true,
@@ -48,7 +47,7 @@ require("mason-nvim-lint").setup({
 		"pylint",
 		"jsonlint",
 	},
-	automatic_installation = true,
+	automatic_installation = false,
 })
 
 vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
