@@ -45,4 +45,4 @@ vim.keymap.set("n", "<leader>,", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
 -- rename variable
-vim.keymap.set("n", "<F-2>", ":lua vim.lsp.buf.rename()")
+vim.keymap.set("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>")
