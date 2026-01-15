@@ -41,5 +41,8 @@ vim.keymap.set("n", "<leader>f", ':lua require("conform").format()<CR>')
 -- quick-fixes
 vim.keymap.set("n", "<leader>,", vim.lsp.buf.code_action)
 
--- replace selected word (like F2)
+-- replace every instance of the word
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+
+-- rename variable
+vim.keymap.set("n", "<F-2>", ":lua vim.lsp.buf.rename()")
