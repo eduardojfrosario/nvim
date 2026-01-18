@@ -36,7 +36,7 @@ vim.keymap.set("v", "<leader>Y", '\"+Y')
 vim.keymap.set("n", "Q", "<nop>")
 
 -- format the entire file
-vim.keymap.set("n", "<leader>f", ':lua require("conform").format()<CR>')
+vim.keymap.set("n", "<leader>f", '<CMD>lua require("conform").format()<CR>')
 
 -- quick-fixes
 vim.keymap.set("n", "<leader>,", vim.lsp.buf.code_action)
@@ -45,4 +45,4 @@ vim.keymap.set("n", "<leader>,", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
 -- rename variable
-vim.keymap.set("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set("n", "<F2>", "<CMD>lua vim.lsp.buf.rename()<CR>")

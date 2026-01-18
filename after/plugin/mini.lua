@@ -43,12 +43,12 @@ require("mini.surround").setup({
 	custom_surroundings = nil,
 	highlight_duration = 500,
 	mappings = {
-		add = "sa", -- Add surrounding in Normal and Visual modes
-		delete = "sd", -- Delete surrounding
-		find = "sf", -- Find surrounding (to the right)
-		find_left = "sF", -- Find surrounding (to the left)
-		highlight = "sh", -- Highlight surrounding
-		replace = "sr", -- Replace surrounding
+		add = "Sa", -- Add surrounding in Normal and Visual modes
+		delete = "Sd", -- Delete surrounding
+		find = "Sf", -- Find surrounding (to the right)
+		find_left = "SF", -- Find surrounding (to the left)
+		highlight = "Sh", -- Highlight surrounding
+		replace = "Sr", -- Replace surrounding
 
 		suffix_last = "l", -- Suffix to search with "prev" method
 		suffix_next = "n", -- Suffix to search with "next" method
@@ -63,6 +63,7 @@ require("mini.surround").setup({
 ---move---
 require("mini.move").setup({
 	mappings = {
+        -- M is alt
 		--visual mode (only selected block)
 		left = "<M-h>",
 		right = "<M-l>",
