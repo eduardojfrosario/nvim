@@ -1,4 +1,7 @@
-require("gruvbox").setup({
+local gruvbox = require("gruvbox")
+local colors = gruvbox.palette
+
+gruvbox.setup({
 	terminal_colors = true, -- add neovim terminal colors
 	undercurl = true,
 	underline = true,
@@ -19,13 +22,13 @@ require("gruvbox").setup({
 	contrast = "", -- can be "hard", "soft" or empty string
 	palette_overrides = {},
 	overrides = {
-		Comment = { italic = true },
-		Conditional = { italic = true },
-		Keyword = { italic = true },
-		Repeat = { italic = true },
-		Constant = { bold = true },
-		Function = { bold = true, italic = true },
-		Type = { italic = true },
+		Comment = { fg = colors.gray, italic = true },
+		Conditional = { fg = colors.bright_red, italic = true },
+		Keyword = { fg = colors.bright_red, italic = true },
+		Repeat = { fg = colors.bright_red, italic = true },
+		Constant = { fg = colors.bright_purple, bold = true },
+		Function = { fg = colors.bright_blue, bold = true, italic = true },
+		Type = { fg = colors.bright_yellow, italic = true },
 	},
 	dim_inactive = false,
 	transparent_mode = true,
