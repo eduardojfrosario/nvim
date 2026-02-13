@@ -1,5 +1,3 @@
-require("mini.icons").setup({})
-
 ---snippets---
 local mini_snippets = require("mini.snippets")
 local gen_loader = mini_snippets.gen_loader
@@ -19,24 +17,6 @@ require("mini.completion").setup({
 })
 -- <C-y> chooses the first completion if none select
 vim.opt.completeopt = { "menu", "menuone", "noinsert" }
-
----autopairs---
-require("mini.pairs").setup({
-	modes = { insert = true, command = false, terminal = false },
-	mappings = {
-		["("] = { action = "open", pair = "()", neigh_pattern = "[^\\]." },
-		["["] = { action = "open", pair = "[]", neigh_pattern = "[^\\]." },
-		["{"] = { action = "open", pair = "{}", neigh_pattern = "[^\\]." },
-
-		[")"] = { action = "close", pair = "()", neigh_pattern = "[^\\]." },
-		["]"] = { action = "close", pair = "[]", neigh_pattern = "[^\\]." },
-		["}"] = { action = "close", pair = "{}", neigh_pattern = "[^\\]." },
-
-		['"'] = { action = "closeopen", pair = '""', neigh_pattern = "[^\\].", register = { cr = false } },
-		["'"] = { action = "closeopen", pair = "''", neigh_pattern = "[^%a\\].", register = { cr = false } },
-		["`"] = { action = "closeopen", pair = "``", neigh_pattern = "[^\\].", register = { cr = false } },
-	},
-})
 
 ---surround---
 require("mini.surround").setup({
