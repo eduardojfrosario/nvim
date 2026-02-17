@@ -10,13 +10,18 @@ mini_snippets.start_lsp_server({})
 
 ---cmp---
 require("mini.completion").setup({
+	delay = {
+		completion = 100,
+		info = 120,
+		signature = 10000000,
+	},
 	window = {
 		info = { border = "double" },
 		signature = { border = "double" },
 	},
 })
 -- <C-y> chooses the first completion if none select
-vim.opt.completeopt = { "menu", "menuone", "noinsert" }
+vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
 
 ---surround---
 require("mini.surround").setup({

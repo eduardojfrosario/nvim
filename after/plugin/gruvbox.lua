@@ -27,7 +27,7 @@ gruvbox.setup({
 		Keyword = { fg = colors.bright_red, italic = true },
 		Repeat = { fg = colors.bright_red, italic = true },
 		Constant = { fg = colors.bright_purple, bold = true },
-		Function = { fg = colors.bright_blue, bold = true, italic = true },
+		Function = { fg = colors.bright_green, bold = true, italic = true },
 		Type = { fg = colors.bright_yellow, italic = true },
 	},
 	dim_inactive = false,
