@@ -8,25 +8,15 @@ require("noice").setup({
 			["vim.lsp.util.convert_input_to_markdown_lines"] = true,
 			["vim.lsp.util.stylize_markdown"] = true,
 		},
-		signature = {
-			enabled = true,
-			auto_open = {
-				enabled = true,
-				trigger = true,
-				luasnip = false,
-				throttle = 120,
-			},
-		},
-		hover = {
-			enabled = true,
-			silent = true,
-		},
 	},
 	views = {
 		notify = {
 			timeout = 1500,
 		},
 	},
+    popupmenu = {
+        enabled = false,
+    },
 	presets = {
 		bottom_search = false, -- use a classic bottom cmdline for search
 		command_palette = true, -- position the cmdline and popupmenu together

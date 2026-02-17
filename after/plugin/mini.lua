@@ -10,18 +10,13 @@ mini_snippets.start_lsp_server({})
 
 ---cmp---
 require("mini.completion").setup({
-	delay = {
-		completion = 100,
-		info = 120,
-		signature = 10000000,
-	},
 	window = {
 		info = { border = "double" },
 		signature = { border = "double" },
 	},
 })
 -- <C-y> chooses the first completion if none select
-vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
+vim.opt.completeopt = { "menu", "menuone", "noinsert" }
 
 ---surround---
 require("mini.surround").setup({
@@ -48,7 +43,7 @@ require("mini.surround").setup({
 ---move---
 require("mini.move").setup({
 	mappings = {
-        -- M is alt
+		-- M is alt
 		--visual mode (only selected block)
 		left = "<M-h>",
 		right = "<M-l>",
