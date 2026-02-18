@@ -1,23 +1,3 @@
----snippets---
-local mini_snippets = require("mini.snippets")
-local gen_loader = mini_snippets.gen_loader
-mini_snippets.setup({
-	snippets = {
-		gen_loader.from_lang(),
-	},
-})
-mini_snippets.start_lsp_server({})
-
----cmp---
-require("mini.completion").setup({
-	window = {
-		info = { border = "double" },
-		signature = { border = "double" },
-	},
-})
--- <C-y> chooses the first completion if none select
-vim.opt.completeopt = { "menu", "menuone", "noinsert" }
-
 ---surround---
 require("mini.surround").setup({
 	custom_surroundings = nil,
