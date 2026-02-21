@@ -10,6 +10,18 @@ require("noice").setup({
 			["cmp.entry.get_documentation"] = true,
 		},
 	},
+	messages = {
+		enabled = true,
+	},
+	routes = {
+		{
+			filter = {
+				event = "msg_showmode",
+				find = "recording",
+			},
+			view = "notify",
+		},
+	},
 	views = {
 		notify = {
 			timeout = 1500,
