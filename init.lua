@@ -1,10 +1,11 @@
 require("losg.lazy")
 require("losg.remap")
 require("losg.set")
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme kanagawa")
 vim.g.user_emmet_leader_key = '<C-b>'
 vim.g.copilot_enabled = false
 
+--- adfa
 local spell_group = vim.api.nvim_create_augroup("AutoSpell", { clear = true })
 
 vim.api.nvim_create_autocmd("FileType", {

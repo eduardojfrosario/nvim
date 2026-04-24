@@ -8,5 +8,5 @@ return {
 
 	{ "navarasu/onedark.nvim", lazy = true, opts = {} },
 
-    { "EdenEast/nightfox.nvim" },
+	{ "EdenEast/nightfox.nvim", lazy = true, opts = {} },
 }

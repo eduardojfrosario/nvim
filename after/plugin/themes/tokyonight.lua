@@ -1,6 +1,6 @@
 -- Configuration for tokyonight
 require("tokyonight").setup({
-	style = "night", -- Choose between 'storm', 'night', 'day'
+	style = "storm", -- Choose between 'storm', 'night', 'day'
 	transparent = true, -- Enable transparent background
 	terminal_colors = true, -- Apply theme to terminal
 	styles = {
