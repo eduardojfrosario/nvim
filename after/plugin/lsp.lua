@@ -34,6 +34,13 @@ require("mason").setup({
 			package_uninstalled = "✗",
 		},
 	},
+	ensure_installed = {
+		-- formatters
+		"stylua",
+		"clang-format",
+		"black",
+		"prettier",
+	},
 })
 
 require("mason-lspconfig").setup({
@@ -49,36 +56,4 @@ require("mason-lspconfig").setup({
 	},
 	-- It automatically runs vim.lsp.enable() for installed servers.
 	automatic_enable = true,
-})
-
--- mason-nvim-lint: installs the linters
-require("mason-nvim-lint").setup({
-	ensure_installed = {
-		"eslint_d",
-		"pylint",
-		"jsonlint",
-	},
-	automatic_installation = false,
-})
-
--- nvim-lint: decides which linter runs for each filetype
-local lint = require("lint")
-
-lint.linters_by_ft = {
-	javascript = { "eslint_d" },
-	javascriptreact = { "eslint_d" },
-	typescript = { "eslint_d" },
-	typescriptreact = { "eslint_d" },
-	python = { "pylint" },
-	json = { "jsonlint" },
-}
-
--- autocmd (with augroup so it doesn't duplicate)
-local group = vim.api.nvim_create_augroup("NvimLint", { clear = true })
-
-vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
-	group = group,
-	callback = function()
-		lint.try_lint()
-	end,
 })
