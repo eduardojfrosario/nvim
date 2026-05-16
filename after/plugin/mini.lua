@@ -25,15 +25,15 @@ require("mini.move").setup({
 	mappings = {
 		-- M is alt
 		--visual mode (only selected block)
-		left = "<M-h>",
-		right = "<M-l>",
-		down = "<M-j>",
-		up = "<M-k>",
+		left = "H",
+		right = "L",
+		down = "J",
+		up = "K",
 		--normal mode (entire line)
-		line_left = "<M-h>",
-		line_right = "<M-l>",
-		line_down = "<M-j>",
-		line_up = "<M-k>",
+		line_left = "H",
+		line_right = "L",
+		-- line_down = "<M-j>",
+		-- line_up = "<M-k>",
 	},
 	options = {
 		reindent_linewise = true,
