@@ -15,3 +15,20 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
   group = spell_group,
 })
+
+local function apply_theme()
+  if vim.o.background == "light" then
+    vim.cmd.colorscheme("catppuccin-latte")
+  else
+    vim.cmd.colorscheme("kanagawa")
+  end
+end
+
+vim.api.nvim_create_autocmd("OptionSet", {
+  pattern = "background",
+  callback = function()
+    vim.schedule(apply_theme)
+  end,
+})
+
+apply_theme()

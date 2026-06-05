@@ -9,4 +9,6 @@ return {
 	{ "navarasu/onedark.nvim", lazy = true, opts = {} },
 
 	{ "EdenEast/nightfox.nvim", lazy = true, opts = {} },
+
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 }
